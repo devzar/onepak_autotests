@@ -976,6 +976,8 @@ describe('PACK AND PICKUP NO PHOTOS TESTS:', () => {
     it("CUSTOMER APPROVAL SCREEN - has main elements", async () => {
         const NumberOfPallets = "2"
         const NumberOfDesktops = "6"
+        const NumberOfOthers = "9"
+        const TotalOfAssets = "15"
 
         //This is a Job
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
@@ -996,6 +998,22 @@ describe('PACK AND PICKUP NO PHOTOS TESTS:', () => {
         await EnterNumberOfAssetsScreen.NextButton_Click()
         //Piece Count Screen
         await PieceCountScreen.PieceCountText_IsPresent()
+        await PieceCountScreen.AddAssetButton_Click()
+
+        //Select Item Type
+        await SelectItemTypeScreen.SelectItemTypeText_IsPresent()
+        await SelectItemTypeScreen.OtherButton_Click()
+
+        //Enter number of assets
+        await driver.pause(500)
+        await EnterNumberOfAssetsScreen.NumberOfAssetsText_HasText("How many Others?")
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText("")
+        
+        //Entering the amount
+        await EnterNumberOfAssetsScreen.Button9_Click()
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText(NumberOfOthers)
+        await EnterNumberOfAssetsScreen.NextButton_Click()
+
         await PieceCountScreen.NextButton_Click()
 
         //Number of Pallets
@@ -1014,7 +1032,7 @@ describe('PACK AND PICKUP NO PHOTOS TESTS:', () => {
         await CustomerApprovalScreen.CustomerApprovalText_IsPresent()
         await CustomerApprovalScreen.TotalPieceCountText_IsPresent()
         await CustomerApprovalScreen.TotalPieceCountNumber_IsPresent()
-        await CustomerApprovalScreen.TotalPieceCountNumber_HasText(NumberOfDesktops)
+        await CustomerApprovalScreen.TotalPieceCountNumber_HasText(TotalOfAssets)
         await CustomerApprovalScreen.BottomBackButton_IsPresent()
         await CustomerApprovalScreen.NextButton_IsPresent()
     })
@@ -1065,6 +1083,8 @@ describe('PACK AND PICKUP NO PHOTOS TESTS:', () => {
     it("CUSTOMER INFO SCREEN - has main elements", async () => {
         const NumberOfPallets = "2"
         const NumberOfDesktops = "6"
+        const NumberOfOthers = "9"
+        const TotalOfAssets = "15"
 
         //This is a Job
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
@@ -1085,6 +1105,21 @@ describe('PACK AND PICKUP NO PHOTOS TESTS:', () => {
         await EnterNumberOfAssetsScreen.NextButton_Click()
         //Piece Count Screen
         await PieceCountScreen.PieceCountText_IsPresent()
+        await PieceCountScreen.AddAssetButton_Click()
+
+        //Select Item Type
+        await SelectItemTypeScreen.SelectItemTypeText_IsPresent()
+        await SelectItemTypeScreen.OtherButton_Click()
+
+        //Enter number of assets
+        await driver.pause(500)
+        await EnterNumberOfAssetsScreen.NumberOfAssetsText_HasText("How many Others?")
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText("")
+        
+        //Entering the amount
+        await EnterNumberOfAssetsScreen.Button9_Click()
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText(NumberOfOthers)
+        await EnterNumberOfAssetsScreen.NextButton_Click()
         await PieceCountScreen.NextButton_Click()
 
         //Number of Pallets
@@ -1108,7 +1143,7 @@ describe('PACK AND PICKUP NO PHOTOS TESTS:', () => {
         await CustomerInfoScreen.LastNameInput_HasText("Last Name")
         await CustomerInfoScreen.EmailInput_HasText("Email")
         await CustomerInfoScreen.TotalPieceCountText_IsPresent()
-        await CustomerInfoScreen.TotalPieceCountNumber_HasText(NumberOfDesktops)
+        await CustomerInfoScreen.TotalPieceCountNumber_HasText(TotalOfAssets)
         await CustomerInfoScreen.BottomBackButton_IsPresent()
         await CustomerInfoScreen.NextButton_IsPresent()
     })
@@ -1595,6 +1630,8 @@ describe('PACK AND PICKUP NO PHOTOS TESTS:', () => {
     it("DRIVER SIGNATURE SCREEN - has main elements", async () => {
         const NumberOfPallets = "2"
         const NumberOfDesktops = "6"
+        const NumberOfOthers = "9"
+        const TotalOfAssets = "15"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -1618,6 +1655,21 @@ describe('PACK AND PICKUP NO PHOTOS TESTS:', () => {
         await EnterNumberOfAssetsScreen.NextButton_Click()
         //Piece Count Screen
         await PieceCountScreen.PieceCountText_IsPresent()
+        await PieceCountScreen.AddAssetButton_Click()
+
+        //Select Item Type
+        await SelectItemTypeScreen.SelectItemTypeText_IsPresent()
+        await SelectItemTypeScreen.OtherButton_Click()
+
+        //Enter number of assets
+        await driver.pause(500)
+        await EnterNumberOfAssetsScreen.NumberOfAssetsText_HasText("How many Others?")
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText("")
+        
+        //Entering the amount
+        await EnterNumberOfAssetsScreen.Button9_Click()
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText(NumberOfOthers)
+        await EnterNumberOfAssetsScreen.NextButton_Click()
         await PieceCountScreen.NextButton_Click()
 
         //Number of Pallets
@@ -1652,7 +1704,7 @@ describe('PACK AND PICKUP NO PHOTOS TESTS:', () => {
 
         //Driver Signature screenn opens
         await DriverSignatureScreen.DriverSignatureText_IsPresent()
-        await DriverSignatureScreen.TotalItemsText_HasText("Total Items: " + NumberOfDesktops)
+        await DriverSignatureScreen.TotalItemsText_HasText("Total Items: " + TotalOfAssets)
         await DriverSignatureScreen.DriverNameText_HasText("Driver")
         await DriverSignatureScreen.ClearButton_IsPresent()
         await DriverSignatureScreen.BottomBackButton_IsPresent()
@@ -1864,11 +1916,11 @@ describe('PACK AND PICKUP NO PHOTOS TESTS:', () => {
     })
     it("SEND DATA SCREEN - has main elements", async () => {
         const NumberOfPallets = "2"
+        const NumberOfDesktops = "6"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
         //This is a Job
-        const NumberOfDesktops = "6"
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
 
@@ -4011,7 +4063,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 2 pallets
         await NumberOfPalletsScreen.Button2_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -4083,7 +4135,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -4151,7 +4203,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -4228,7 +4280,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -4606,6 +4658,8 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
     it("CUSTOMER APPROVAL SCREEN - has main elements", async () => {
         const NumberOfPallets = "1"
         const NumberOfDesktops = "6"
+        const NumberOfOthers = "9"
+        const TotalOfAssets = "15"
 
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
@@ -4646,12 +4700,27 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         await EnterNumberOfAssetsScreen.NextButton_Click()
         //Piece Count Screen
         await PieceCountScreen.PieceCountText_IsPresent()
+        await PieceCountScreen.AddAssetButton_Click()
+
+        //Select Item Type
+        await SelectItemTypeScreen.SelectItemTypeText_IsPresent()
+        await SelectItemTypeScreen.OtherButton_Click()
+
+        //Enter number of assets
+        await driver.pause(500)
+        await EnterNumberOfAssetsScreen.NumberOfAssetsText_HasText("How many Others?")
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText("")
+        
+        //Entering the amount
+        await EnterNumberOfAssetsScreen.Button9_Click()
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText(NumberOfOthers)
+        await EnterNumberOfAssetsScreen.NextButton_Click()
         await PieceCountScreen.NextButton_Click()
 
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -4673,7 +4742,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         await CustomerApprovalScreen.CustomerApprovalText_IsPresent()
         await CustomerApprovalScreen.TotalPieceCountText_IsPresent()
         await CustomerApprovalScreen.TotalPieceCountNumber_IsPresent()
-        await CustomerApprovalScreen.TotalPieceCountNumber_HasText(NumberOfDesktops)
+        await CustomerApprovalScreen.TotalPieceCountNumber_HasText(TotalOfAssets)
         await CustomerApprovalScreen.BottomBackButton_IsPresent()
         await CustomerApprovalScreen.NextButton_IsPresent()
     })
@@ -4725,7 +4794,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -4752,6 +4821,8 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
     it("CUSTOMER INFO SCREEN - has main elements", async () => {
         const NumberOfPallets = "1"
         const NumberOfDesktops = "6"
+        const NumberOfOthers = "9"
+        const TotalOfAssets = "15"
 
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
@@ -4792,12 +4863,27 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         await EnterNumberOfAssetsScreen.NextButton_Click()
         //Piece Count Screen
         await PieceCountScreen.PieceCountText_IsPresent()
+        await PieceCountScreen.AddAssetButton_Click()
+
+        //Select Item Type
+        await SelectItemTypeScreen.SelectItemTypeText_IsPresent()
+        await SelectItemTypeScreen.OtherButton_Click()
+
+        //Enter number of assets
+        await driver.pause(500)
+        await EnterNumberOfAssetsScreen.NumberOfAssetsText_HasText("How many Others?")
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText("")
+        
+        //Entering the amount
+        await EnterNumberOfAssetsScreen.Button9_Click()
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText(NumberOfOthers)
+        await EnterNumberOfAssetsScreen.NextButton_Click()
         await PieceCountScreen.NextButton_Click()
 
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -4824,7 +4910,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         await CustomerInfoScreen.LastNameInput_HasText("Last Name")
         await CustomerInfoScreen.EmailInput_HasText("Email")
         await CustomerInfoScreen.TotalPieceCountText_IsPresent()
-        await CustomerInfoScreen.TotalPieceCountNumber_HasText(NumberOfDesktops)
+        await CustomerInfoScreen.TotalPieceCountNumber_HasText(TotalOfAssets)
         await CustomerInfoScreen.BottomBackButton_IsPresent()
         await CustomerInfoScreen.NextButton_IsPresent()
     })
@@ -4876,7 +4962,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -4954,7 +5040,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5042,7 +5128,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5146,7 +5232,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5189,6 +5275,8 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //This is a Job
         const NumberOfPallets = "1"
         const NumberOfDesktops = "6"
+        const NumberOfOthers = "9"
+        const TotalOfAssets = "15"
 
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
@@ -5229,12 +5317,27 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         await EnterNumberOfAssetsScreen.NextButton_Click()
         //Piece Count Screen
         await PieceCountScreen.PieceCountText_IsPresent()
+        await PieceCountScreen.AddAssetButton_Click()
+
+        //Select Item Type
+        await SelectItemTypeScreen.SelectItemTypeText_IsPresent()
+        await SelectItemTypeScreen.OtherButton_Click()
+
+        //Enter number of assets
+        await driver.pause(500)
+        await EnterNumberOfAssetsScreen.NumberOfAssetsText_HasText("How many Others?")
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText("")
+        
+        //Entering the amount
+        await EnterNumberOfAssetsScreen.Button9_Click()
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText(NumberOfOthers)
+        await EnterNumberOfAssetsScreen.NextButton_Click()
         await PieceCountScreen.NextButton_Click()
 
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5265,7 +5368,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Customer Signature screenn opens
         await CustomerSignatureScreen.CustomerSignatureText_IsPresent()
-        await CustomerSignatureScreen.TotalItemsText_HasText("Total Items: " + NumberOfDesktops)
+        await CustomerSignatureScreen.TotalItemsText_HasText("Total Items: " + TotalOfAssets)
         await CustomerSignatureScreen.CustomerSugnatureInput_IsPresent()
         await CustomerSignatureScreen.CustomerNameText_HasText(FirstName + " " + LastName)
         await CustomerSignatureScreen.ClearButton_IsPresent()
@@ -5323,7 +5426,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5410,7 +5513,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5505,7 +5608,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5553,6 +5656,8 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         const Email = "john.smith@test.com"
         const NumberOfPallets = "1"
         const NumberOfDesktops = "6"
+        const NumberOfOthers = "9"
+        const TotalOfAssets = "15"
 
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
@@ -5593,12 +5698,27 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         await EnterNumberOfAssetsScreen.NextButton_Click()
         //Piece Count Screen
         await PieceCountScreen.PieceCountText_IsPresent()
+        await PieceCountScreen.AddAssetButton_Click()
+
+        //Select Item Type
+        await SelectItemTypeScreen.SelectItemTypeText_IsPresent()
+        await SelectItemTypeScreen.OtherButton_Click()
+
+        //Enter number of assets
+        await driver.pause(500)
+        await EnterNumberOfAssetsScreen.NumberOfAssetsText_HasText("How many Others?")
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText("")
+        
+        //Entering the amount
+        await EnterNumberOfAssetsScreen.Button9_Click()
+        await EnterNumberOfAssetsScreen.NumberOfAssetsInput_HasText(NumberOfOthers)
+        await EnterNumberOfAssetsScreen.NextButton_Click()
         await PieceCountScreen.NextButton_Click()
 
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5636,7 +5756,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Driver Signature screenn opens
         await DriverSignatureScreen.DriverSignatureText_IsPresent()
-        await DriverSignatureScreen.TotalItemsText_HasText("Total Items: " + NumberOfDesktops)
+        await DriverSignatureScreen.TotalItemsText_HasText("Total Items: " + TotalOfAssets)
         await DriverSignatureScreen.DriverNameText_HasText("Driver")
         await DriverSignatureScreen.ClearButton_IsPresent()
         await DriverSignatureScreen.BottomBackButton_IsPresent()
@@ -5693,7 +5813,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5786,7 +5906,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5887,7 +6007,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -5987,7 +6107,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -6084,7 +6204,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -6185,7 +6305,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
+        //entering 1 pallet
         await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -6240,7 +6360,7 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const NumberOfDesktops = "6"
 
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
@@ -6287,8 +6407,8 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 2 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -6302,14 +6422,6 @@ describe.only('PACK AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()

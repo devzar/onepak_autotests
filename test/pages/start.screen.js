@@ -14,7 +14,7 @@ class StartScreen {
   }
   //DriverAppText
   async DriverAppText_IsPresent() {
-    await GeneralFunctions.ElementIsPresentOnTheScreen(this.DriverAppText, 10000)
+    await GeneralFunctions.ElementIsPresentOnTheScreen(this.DriverAppText)
   }
   //WhatToDoButton
   async WhatToDoButton_IsPresent() {

@@ -2223,7 +2223,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await TakePalletsPhotoScreen.TakeAPhotoButton_IsPresent()
     })
     it("TOTAL PALLETS SCREEN - hamburger button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
 
@@ -2255,8 +2255,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 4 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -2701,7 +2701,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await CustomerApprovalScreen.NextButton_IsPresent()
     })
     it("CUSTOMER APPROVAL SCREEN - bottom back button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
 
@@ -2733,8 +2733,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 2 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -2749,14 +2749,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -2842,7 +2834,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await CustomerInfoScreen.NextButton_IsPresent()
     })
     it("CUSTOMER INFO SCREEN - back button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
 
@@ -2874,8 +2866,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -2890,14 +2882,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -2915,7 +2899,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await CustomerApprovalScreen.TotalLoadCountNumber_HasText(NumberOfPallets)
     })
     it("CUSTOMER INFO SCREEN - inputs work properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
 
@@ -2946,8 +2930,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -2962,14 +2946,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -2997,7 +2973,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         const WrongEmail5 = "john.smith@test!com"
         const WrongEmail6 = "john.smith#test.com"
 
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
 
@@ -3029,8 +3005,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -3045,14 +3021,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -3096,7 +3064,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         await ThisJobIsScreen.ThisJobIsText_IsPresent()
         await ThisJobIsScreen.NextButton_Click()
 
@@ -3128,8 +3096,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -3144,14 +3112,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -3211,7 +3171,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
+        //entering 2 pallets
         await NumberOfPalletsScreen.Button2_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -3260,7 +3220,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await CustomerSignatureScreen.NextButton_IsPresent()
     })
     it("CUSTOMER SIGNATURE SCREEN - back button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -3296,8 +3256,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -3312,14 +3272,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -3343,7 +3295,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await CustomerInfoScreen.CustomerInfoText_IsPresent()
     })
     it("CUSTOMER SIGNATURE SCREEN - clear button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -3379,8 +3331,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -3395,14 +3347,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -3434,7 +3378,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await CustomerSignatureScreen.OKButton_IsNotPresent()
     })
     it("CUSTOMER SIGNATURE SCREEN - next button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -3470,8 +3414,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -3486,14 +3430,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -3559,7 +3495,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
+        //entering 2 pallets
         await NumberOfPalletsScreen.Button2_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
@@ -3614,7 +3550,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await DriverSignatureScreen.ApproveButton_IsPresent()
     })
     it("DRIVER SIGNATURE SCREEN - back button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -3650,8 +3586,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -3666,14 +3602,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -3703,7 +3631,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await CustomerSignatureScreen.CustomerSignatureText_IsPresent()
     })
     it("DRIVER SIGNATURE SCREEN - clear button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -3739,8 +3667,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -3755,14 +3683,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -3800,7 +3720,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await DriverSignatureScreen.OKButton_IsNotPresent()
     })
     it("DRIVER SIGNATURE SCREEN - next button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -3836,8 +3756,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -3852,14 +3772,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -3896,7 +3808,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await DriverSignatureScreen.OKButton_IsPresent()
     })
     it("SEND DATA SCREEN - has main elements", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -3932,8 +3844,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallets
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -3948,14 +3860,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -3989,7 +3893,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await SendDataScreen.SendDataText_IsPresent()
     })
     it("SEND DATA SCREEN - Back button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -4025,8 +3929,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -4041,14 +3945,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -4086,7 +3982,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await DriverSignatureScreen.DriverSignatureText_IsPresent()
     })
     it("SEND DATA SCREEN - Send button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -4122,8 +4018,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -4138,14 +4034,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
@@ -4184,7 +4072,7 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         await SendDataScreen.IAmDoneButton_IsPresent()
     })
     it("SEND DATA SCREEN - I am done button works properly", async () => {
-        const NumberOfPallets = "2"
+        const NumberOfPallets = "1"
         const FirstName = "John"
         const LastName = "Smith"
         const Email = "john.smith@test.com"
@@ -4220,8 +4108,8 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         //Number of Pallets
         await NumberOfPalletsScreen.NumberOfPalletsText_IsPresent()
         
-        //entering 789 pallets
-        await NumberOfPalletsScreen.Button2_Click()
+        //entering 1 pallet
+        await NumberOfPalletsScreen.Button1_Click()
         await NumberOfPalletsScreen.NumberOfPalletsInput_HasText(NumberOfPallets)
         await NumberOfPalletsScreen.NextButton_Click()
 
@@ -4236,14 +4124,6 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
 
         //Total pallets page
         await TotalPalletsScreen.TotalPalletsText_HasText("Total Pallets: " + NumberOfPallets)
-
-        //Pressing Next pallet
-        await TotalPalletsScreen.NextPalletButton_Click()
-        await InfoPalletPhotoScreen.PalletNumberText_HasText("Pallet: 2")
-        await InfoPalletPhotoScreen.InstructionText_IsPresent()
-        await InfoPalletPhotoScreen.PhotoButton_Click() 
-        await TakePalletsPhotoScreen.TakeAPhotoButton_Click()
-        await TakePalletsPhotoScreen.ContinueButton_Click()
 
         await TotalPalletsScreen.DoneButton_Click()
         await PalletPhotosSavedScreen.ContinueButton_Click()
