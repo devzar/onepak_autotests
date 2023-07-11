@@ -24,7 +24,6 @@ import SendDataScreen from '../pages/approval-screens/send-data.screen.js';
 describe('PALLET PICKUP NO PHOTOS TESTS:', () => {
     beforeEach(async () => {
         try {
-            await driver.closeApp()
             await GeneralFunctions.LaunchAppWithSeveralAttempts()
 
             //start screen
@@ -47,6 +46,9 @@ describe('PALLET PICKUP NO PHOTOS TESTS:', () => {
         catch(error) {
             console.error(`Error setting up test: ${error}`);
         }
+    })
+    afterEach(async () => {
+        await driver.closeApp()
     })
     it("THIS JOB SCREEN - has main elements", async () => {
         //This is a Job 
@@ -1171,7 +1173,6 @@ describe('PALLET PICKUP NO PHOTOS TESTS:', () => {
 describe('PALLET PICKUP WITH PHOTOS TESTS:', () => {
     beforeEach(async () => {
         try {
-            await driver.closeApp()
             await GeneralFunctions.LaunchAppWithSeveralAttempts()
 
             //start screen
@@ -1192,6 +1193,9 @@ describe('PALLET PICKUP WITH PHOTOS TESTS:', () => {
         catch(error) {
             console.error(`Error setting up test: ${error}`);
         }
+    })
+    afterEach(async () => {
+        await driver.closeApp()
     })
     it("THIS JOB SCREEN - has main elements", async () => {
         //This is a Job screen

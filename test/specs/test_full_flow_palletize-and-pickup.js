@@ -54,6 +54,9 @@ describe('PALLETIZE AND PICKUP NO PHOTOS TEST:', () => {
         }
         
     })
+    afterEach(async () => {
+        await driver.closeApp()
+    })
     it("Full Run", async () => {
         const NumberOfPallets = "987"
         const FirstName = "John"
@@ -232,6 +235,9 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TEST:', () => {
         catch(error) {
             console.error(`Error setting up test: ${error}`);
         }
+    })
+    afterEach(async () => {
+        await driver.closeApp()
     })
     it("Full Run", async () => {
         const NumberOfPallets = "2"

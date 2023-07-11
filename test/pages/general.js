@@ -11,7 +11,7 @@ class GeneralFunctions {
         while (!appOpened && attempts < maxAttempts) {
           try {
             await driver.launchApp();
-            await driver.pause(5000)
+            await driver.pause(3000)
             await StartScreen.DriverAppText_IsPresent()
             appOpened = true;
             await driver.pause(500)

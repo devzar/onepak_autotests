@@ -6,12 +6,13 @@ class TotalPalletsScreen {
     get TotalPalletsText() {return $('//android.widget.TextView[contains(@text,"Total Pallets: ")]');}
     get NotificationNoPalletsText() {return $('//android.widget.TextView[@text="You do not have any pallets."]');}
 
-    get FirstPalletNumber() {return $('//android.widget.TextView[@text="1"]');}
-    get FirstPalletPhotosNumberText() {return $(`//android.widget.TextView[@text="1"]/../android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView`);}
-    get RemoveFirstPalletButton() {return $(`//android.widget.TextView[@text="1"]/../android.view.ViewGroup/android.widget.TextView[@text="Remove"]`);}
+    get FirstPalletNumber() {return $('//*[contains(@text,"Total Pallets: ")]/../following-sibling::android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]//android.widget.TextView[@text="1"]');}
+    get FirstPalletPhotosNumberText() {return $(`//*[contains(@text,"Total Pallets: ")]/../following-sibling::android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]//android.widget.TextView[@text="1"]/../android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView`);}
+    get RemoveFirstPalletButton() {return $(`//*[contains(@text,"Total Pallets: ")]/../following-sibling::android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]//android.widget.TextView[@text="1"]/../android.view.ViewGroup/android.widget.TextView[@text="Remove"]`);}
  
-    get SecondPalletNumber() {return $('//android.widget.TextView[@text="2"]');}
-    get RemoveSecondPalletButton() {return $(`//android.widget.TextView[@text="2"]/../android.view.ViewGroup/android.widget.TextView[@text="Remove"]`);}
+    get SecondPalletNumber() {return $('//*[contains(@text,"Total Pallets: ")]/../following-sibling::android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]//android.widget.TextView[@text="2"]');}
+    get SecondPalletPhotosNumberText() {return $(`//*[contains(@text,"Total Pallets: ")]/../following-sibling::android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]//android.widget.TextView[@text="2"]/../android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView`);}
+    get RemoveSecondPalletButton() {return $(`//*[contains(@text,"Total Pallets: ")]/../following-sibling::android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]//android.widget.TextView[@text="2"]/../android.view.ViewGroup/android.widget.TextView[@text="Remove"]`);}
 
     get DeletePalletText() {return $('//*[contains(@text,"Are you sure you want to remove pallet #")]');}
     get CancelDeletePalletButton() {return $('//android.widget.TextView[@text="Cancel"]');}
@@ -74,6 +75,9 @@ class TotalPalletsScreen {
     async SecondPalletNumber_IsNotPresent() {
         await GeneralFunctions.ElementIsNotPresentOnTheScreen(this.SecondPalletNumber)
     }
+    async SecondPalletPhotosNumberText_HasText(expected_text) {
+        await GeneralFunctions.ElementHasText(this.SecondPalletPhotosNumberText, expected_text)
+    }    
     async RemoveSecondPalletButton_Click() {
         await GeneralFunctions.ElementIsClicked(this.RemoveSecondPalletButton)
     }

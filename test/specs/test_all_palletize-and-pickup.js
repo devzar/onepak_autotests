@@ -32,7 +32,6 @@ import infoPackAndWrapScreen from '../pages/palletize-and-pickup-job/info-pack-a
 describe('PALLETIZE AND PICKUP NO PHOTOS TESTS:', () => {
     beforeEach(async () => {
         try {
-            await driver.closeApp()
             await GeneralFunctions.LaunchAppWithSeveralAttempts()
 
             //start screen
@@ -53,6 +52,9 @@ describe('PALLETIZE AND PICKUP NO PHOTOS TESTS:', () => {
         catch(error) {
             console.error(`Error setting up test: ${error}`);
         }
+    })
+    afterEach(async () => {
+        await driver.closeApp()
     })
     it("THIS JOB SCREEN - has main elements", async () => {
         //This is a Job 
@@ -1160,7 +1162,6 @@ describe('PALLETIZE AND PICKUP NO PHOTOS TESTS:', () => {
 describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
     beforeEach(async () => {
         try {
-            await driver.closeApp()
             await GeneralFunctions.LaunchAppWithSeveralAttempts()
 
             //start screen
@@ -1181,6 +1182,9 @@ describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
         catch(error) {
             console.error(`Error setting up test: ${error}`);
         }
+    })
+    afterEach(async () => {
+        await driver.closeApp()
     })
     it("THIS JOB SCREEN - has main elements", async () => {
         //This is a Job 

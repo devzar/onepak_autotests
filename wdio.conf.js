@@ -46,7 +46,8 @@ export const config = {
         ],
         full_runs: [
             './test/specs/test_full_flow_pallet-pickup.js',
-            './test/specs/test_full_flow_palletize-and-pickup.js'
+            './test/specs/test_full_flow_palletize-and-pickup.js',
+            './test/specs/./test_full_flow_pack-and-pickup.js'
         ],
     },
     // Patterns to exclude.
