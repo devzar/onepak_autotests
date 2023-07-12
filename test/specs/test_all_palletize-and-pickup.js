@@ -32,14 +32,10 @@ import infoPackAndWrapScreen from '../pages/palletize-and-pickup-job/info-pack-a
 describe('PALLETIZE AND PICKUP NO PHOTOS TESTS:', () => {
     beforeEach(async () => {
         try {
+            //launching the app and going to mobile screen
             await GeneralFunctions.LaunchAppWithSeveralAttempts()
 
-            //start screen
-            await StartScreen.DriverAppText_IsPresent()
-            await StartScreen.StartJobButton_Click()
-
             //entering phone number with the job
-            await MobilePhoneScreen.MobilePhoneText_Exists()
             await GeneralFunctions.CloseNotificationButton.click()
             await MobilePhoneScreen.EnterPhoneNumberWithJob()        
             await MobilePhoneScreen.NextButton_Click()
@@ -1162,14 +1158,10 @@ describe('PALLETIZE AND PICKUP NO PHOTOS TESTS:', () => {
 describe('PALLETIZE AND PICKUP WITH PHOTOS TESTS:', () => {
     beforeEach(async () => {
         try {
+            //launching the app and going to mobile screen
             await GeneralFunctions.LaunchAppWithSeveralAttempts()
 
-            //start screen
-            await StartScreen.DriverAppText_IsPresent()
-            await StartScreen.StartJobButton_Click()
-
             //entering phone number with the job
-            await MobilePhoneScreen.MobilePhoneText_Exists()
             await GeneralFunctions.CloseNotificationButton.click()
             await MobilePhoneScreen.EnterPhoneNumberWithJob()        
             await MobilePhoneScreen.NextButton_Click()

@@ -24,14 +24,10 @@ import SendDataScreen from '../pages/approval-screens/send-data.screen.js';
 describe('PALLET PICKUP NO PHOTOS TESTS:', () => {
     beforeEach(async () => {
         try {
+            //launching the app and going to mobile screen
             await GeneralFunctions.LaunchAppWithSeveralAttempts()
 
-            //start screen
-            await StartScreen.DriverAppText_IsPresent()
-            await StartScreen.StartJobButton_Click()
-
             //entering phone number with the job
-            await MobilePhoneScreen.MobilePhoneText_Exists()
             await GeneralFunctions.CloseNotificationButton.click()
             await MobilePhoneScreen.EnterPhoneNumberWithJob()     
             await expect(MobilePhoneScreen.MobileInput.toHaveText("456-123-7890"))
@@ -1173,14 +1169,10 @@ describe('PALLET PICKUP NO PHOTOS TESTS:', () => {
 describe('PALLET PICKUP WITH PHOTOS TESTS:', () => {
     beforeEach(async () => {
         try {
+            //launching the app and going to mobile screen
             await GeneralFunctions.LaunchAppWithSeveralAttempts()
 
-            //start screen
-            await StartScreen.DriverAppText_IsPresent()
-            await StartScreen.StartJobButton_Click()
-
             //entering phone number with the job
-            await MobilePhoneScreen.MobilePhoneText_Exists()
             await GeneralFunctions.CloseNotificationButton.click()
             await MobilePhoneScreen.EnterPhoneNumberWithJob()        
             await MobilePhoneScreen.NextButton_Click()

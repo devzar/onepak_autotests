@@ -1,4 +1,6 @@
 import StartScreen from '../pages/start.screen.js';
+import MobilePhoneScreen from '../pages/mobile-phone.screen.js';
+
 
 class GeneralFunctions {
   get CloseNotificationButton() {return $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]');}
@@ -11,10 +13,12 @@ class GeneralFunctions {
         while (!appOpened && attempts < maxAttempts) {
           try {
             await driver.launchApp();
-            await driver.pause(3000)
             await StartScreen.DriverAppText_IsPresent()
+            await driver.pause(2000)
+            await StartScreen.StartJobButton_Click()
+            await MobilePhoneScreen.MobilePhoneText_Exists()
+            await driver.pause(1000)
             appOpened = true;
-            await driver.pause(500)
 
           } catch (err) {
             console.log(`Attempt ${attempts+1} to launch app failed`);
